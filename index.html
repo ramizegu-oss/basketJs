@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basket</title>
+        <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <section id="header-sec">
+                <div class="main-div">
+                    <div class="icon-div-h">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <div class="list-div">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Shop</a></li>
+                            <li><a href="">About US</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-div">
+                        <div class="icon-div">
+                            <i class="fa-solid fa-outdent "></i>
+                            <i class="fa-solid fa-indent hide"></i>
+                        </div>
+                        <div class="elements-div" style="    padding-right: 6pc;">
+                            <ul>
+                                <li><a href="">About Company</a></li>
+                                <li><a href="">FAQ</a></li>
+                                <li><a href="">Deports</a></li>
+                                <li><a href="">Services</a></li>
+                                <li><a href="">Location</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section id="main-section">
+                <div class="main-div">
+                    <div class="basket">
+                        <ul class="list-group">
+                            
+                        </ul>
+                        <button>Apply</button>
+                        <div class="confirm" aria-live="polite">
+                            <svg class="confirm-icon confirm-icon-success" viewBox="0 0 52 52" aria-hidden="true">
+                                <circle class="confirm-circle" cx="26" cy="26" r="24" fill="none"></circle>
+                                <path class="confirm-check" fill="none" d="M14 27l8 8 16-18"></path>
+                            </svg>
+                            <svg class="confirm-icon confirm-icon-error" viewBox="0 0 52 52" aria-hidden="true">
+                                <circle class="confirm-circle" cx="26" cy="26" r="24" fill="none"></circle>
+                                <path class="confirm-cross" fill="none" d="M16 16l20 20M36 16L16 36"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="goods">
+                        <div class="form-div d-none">
+                            <i class="fa-solid fa-xmark"></i>
+                            <h2>Fill out the form:</h2>
+                            <input type="text" placeholder="Product Name" id="nameInput">
+                            <input type="number" placeholder="Price" id="priceInput">
+                            <button id="add-product">Add</button>
+                        </div>
+                        <button id="open-tab">Add Product</button>
+                        <ul class="list-group">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

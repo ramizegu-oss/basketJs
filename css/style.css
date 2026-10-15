@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header {
+    background-color: burlywood;
+}
+
+#header-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#header-sec .main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 61px;
+}
+
+#header-sec .main-div .list-div ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 6pc;
+}
+
+#header-sec .main-div .list-div ul li a {
+    text-decoration: none;
+    font-family: fantasy;
+    color: white;
+    font-size: 32px;
+}
+
+#header-sec .main-div .icon-div-h {
+    position: absolute;
+    right: 93%;
+}
+
+#header-sec .main-div .icon-div-h i {
+    color: aliceblue;
+    font-size: 2pc;
+    cursor: pointer;
+}
+
+.tab-div {
+    position: absolute;
+    left: 90%;
+    display: flex;
+    background-color: gold;
+    height: 100%;
+    width: 13%;
+    justify-content: center;
+    padding-top: 7px;
+    transform: translateX(9.7pc);
+    border-radius: 9px;
+}
+
+.open-tab {
+    transform: translateX(0pc);
+}
+
+.tab-div ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    font-size: large;
+}
+
+.tab-div ul a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+}
+
+.tab-div ul a:hover {
+    color: antiquewhite;
+}
+
+.tab-div .icon-div {
+    position: relative;
+    right: -2%;
+    top: 13%;
+}
+
+.tab-div .icon-div .fa-outdent {
+    position: absolute;
+    position: static;
+}
+
+.tab-div .icon-div i {
+    color: aliceblue;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.tab-div .icon-div i:hover {
+    color: antiquewhite;
+}
+
+.hide {
+    display: none;
+}
+
+#main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#main-section .main-div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#main-section .main-div .basket {
+    width: 50%;
+    height: 100%;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#main-section .main-div .basket button {
+    background-color: #69c669;
+    border: none;
+    position: absolute;
+    top: 68%;
+    width: 35%;
+    height: 5%;
+    color: cornsilk;
+    font-size: 14px;
+    font-family: monospace;
+    font-weight: bold;
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+#main-section .main-div .basket button:hover {
+    background-color: #45b945;
+    transform: scale(1.1);
+    border-radius: 5pc;
+    color: white;
+}
+
+.confirm {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 20px) scale(0.7);
+}
+
+.confirm.show {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+}
+
+.confirm-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.confirm-icon-success {
+    color: #39b54a;
+}
+
+.confirm-icon-error {
+    color: #d9534f;
+}
+
+.confirm-circle,
+.confirm-check,
+.confirm-cross {
+    stroke: currentColor;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.confirm-circle {
+    stroke-dasharray: 151;
+    stroke-dashoffset: 151;
+}
+
+.confirm-check {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+}
+
+.confirm-cross {
+    stroke-dasharray: 29;
+    stroke-dashoffset: 29;
+}
+
+.confirm.show .confirm-circle,
+.confirm.show .confirm-check,
+.confirm.show .confirm-cross {
+    animation: confirm-draw 0.6s ease forwards;
+}
+
+.confirm.show .confirm-check {
+    animation-delay: 0.45s;
+}
+
+.confirm.show .confirm-cross {
+    animation-delay: 0.45s;
+}
+
+.confirm.is-success .confirm-icon-error,
+.confirm.is-error .confirm-icon-success {
+    display: none;
+}
+
+@keyframes confirm-draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#main-section .main-div .basket ul {
+    position: absolute;
+    top: 11%;
+    width: 85%;
+}
+
+#main-section .main-div .basket ul li {
+    background-color: cadetblue;
+    color: white;
+}
+
+#main-section .main-div .basket ul li i {
+    position: absolute;
+    left: 90%;
+    cursor: pointer;
+}
+
+#main-section .main-div .goods {
+    width: 50%;
+    position: relative;
+    height: 100%;
+    background-color: gray;
+}
+
+#main-section .main-div .goods ul {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 14%;
+}
+
+#main-section .main-div .goods ul li {
+}
+
+#main-section .main-div .goods ul li .fa-trash {
+    position: absolute;
+    left: 90%;
+    cursor: pointer;
+    color: #926a6a;
+}
+
+#main-section .main-div .goods ul li .fa-cart-shopping {
+    color: #7fc07f;
+    position: absolute;
+    left: 94%;
+    cursor: pointer;
+}
+
+#main-section .main-div .goods #open-tab {
+    position: absolute;
+    left: 78%;
+    top: 4%;
+    border: none;
+    background-color: #76de76;
+    width: 14%;
+    height: 5%;
+    border-radius: 11px;
+    color: white;
+    font-size: 12px;
+    font-family: system-ui;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#main-section .main-div .goods #open-tab:hover {
+    background-color: #45b945;
+    transform: scale(1.1);
+}
+
+#main-section .main-div .goods .form-div {
+    width: 55%;
+    height: 60%;
+    background: white;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5pc;
+    position: absolute;
+    left: 5%;
+    top: 7%;
+    z-index: 1;
+}
+
+#main-section .main-div .goods .form-div input {
+    width: 90%;
+    border-radius: 8px;
+    border: grey 0.5px solid;
+    padding-left: 2pc;
+}
+
+#main-section .main-div .goods .form-div #add-product {
+    position: absolute;
+    width: 70%;
+    height: 6%;
+    border: none;
+    background-color: #a5c3de;
+    font-size: 19px;
+    font-family: system-ui;
+    font-weight: bold;
+    color: aliceblue;
+    border-radius: 8px;
+    top: 80%;
+}
+
+#main-section .main-div .goods .form-div h2 {
+    font-family: cursive;
+    color: black;
+}
+
+#main-section .main-div .goods .form-div i {
+    color: red;
+    position: absolute;
+    bottom: 90%;
+    left: 83%;
+    font-size: 2pc;
+    cursor: pointer;
+}
+
+#main-section .main-div .goods .form-div #add-product:hover {
+    transform: scale(0.9);
+}
